@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 600px;
+    font-family: 'Roboto', sans-serif;
+    background-color: black;
+}
+
+header{
+    position: absolute;
+    margin-top: -500px;
+}
+
+header h1{
+    font-size: 40px;
+    color: white;
+    position: relative;
+}
+
+.main-section{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 200px;
+    width: 100%;
+}
+
+.container-1{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 15px solid rgb(255, 142, 142);
+    border-radius: 20%;
+    border-radius: 20%;
+    background-color: whitesmoke;
+    margin: 10px;
+}
+
+.container-2{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 15px solid rgb(255, 142, 142);
+    border-radius: 20%;
+    background-color: whitesmoke;
+    margin: 10px;
+}
+
+.container-3{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 15px solid rgb(255, 142, 142);
+    border-radius: 20%;
+    background-color: whitesmoke;
+    margin: 10px;
+}
+
+.container-3 h1{
+    text-shadow: 0px 1px 3px #000000;
+    color: white;
+    position: relative;
+    font-size: 40px;
+}
+
+.container-3 h1::before{
+    content: "loading....";
+    position: absolute;
+    color: rgb(247, 154, 154);
+    width: 0;
+    overflow: hidden;
+    animation: move 1s linear infinite;
+}
+
+.container-2 h1, .container-1 h1{
+    color: coral;
+    font-weight: 300;
+}
+
+.circle-container{
+    display: flex;
+}
+
+.circle-container-2{
+    display: flex;
+    border-bottom: 2px solid lightcoral;
+    padding: 0;
+}
+
+.circle-container-2 .con-2-circle{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 0 10px;
+    animation: loading-sec 0.5s alternate infinite;
+}
+
+.con-2-circle:nth-child(1){
+    background-color: tomato;
+}
+
+.con-2-circle:nth-child(2){
+    background-color: salmon;
+    animation-delay: 0.1s;
+}
+
+.con-2-circle:nth-child(3){
+    background-color: coral;
+    animation-delay: 0.2s;
+}
+
+.circle{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 10px;
+    animation: loading 1s alternate infinite;
+    opacity: 0;
+}
+
+.circle-1{
+    background-color: tomato;
+}
+
+.circle-2{
+    background-color: salmon;
+}
+
+.circle-3{
+    background-color: coral;
+}
+
+@keyframes loading{
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes loading-sec{
+    to{
+        transform: translateY(-100px);
+    }
+}
+
+@keyframes move{
+    to{
+        width: 100%;
+    }
+}
